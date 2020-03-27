@@ -2,7 +2,7 @@ import csv
 
 
 print("----")
-print("my-albums-sorted")
+print("my-albums-ordered")
 print("OPTIONS: album, artist, date")
 print("Type which option you want and press enter")
 sort_setting = input()
