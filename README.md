@@ -1,7 +1,6 @@
 # my-albums-ordered
-Sort albums by name, artist, or date in a csv file
+Personal tool to sort albums in a csv file
 
 # Using this yourself
 1. Download this repository
-2. Using terminal, go to the directory of this repository
-3. Type `python3 main.py`
+2. Using terminal, go to the directory of this repository and type `python3 main.py`
