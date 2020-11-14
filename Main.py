@@ -8,17 +8,23 @@ print("Type which option you want and press enter")
 sort_setting = input()
 print("----")
 
-with open("albums.csv", "r") as csvfile_read:
-	csv_dictreader = csv.DictReader(csvfile_read, delimiter=";")
-	sorted_albums = sorted(csv_dictreader, key=lambda row : row[sort_setting].lower())
+# Select albums.csv
+with open("albums.csv", "r") as csvfile:
+
+	# Read albums.csv content
+	csvfile_read = csv.DictReader(csvfile, delimiter=";")
+
+	# Sort content by sort_setting
+	sorted_albums = sorted(csvfile_read, key=lambda row : row[sort_setting])
 	print("Albums sorted by " + sort_setting)
 
-	with open("sortedalbums.csv", "w") as csvfile_write:
-		csv_dictwriter = csv.DictWriter(csvfile_write, fieldnames=["album", "artist", "date"], delimiter=";")
-		csv_dictwriter.writeheader()
-		for line in sorted_albums:
-			csv_dictwriter.writerow(line)
-		print("Albums printed to sortedalbums.csv")
+	# Write sorted content to sortedalbums.csv
+	with open("sortedalbums.csv", "w") as csvfile:
+		csvfile_write = csv.DictWriter(csvfile, delimiter=";", fieldnames=["album", "artist", "date"])
+		csvfile_write.writeheader()
+		for row in sorted_albums:
+			csvfile_write.writerow(row)
+		print("Sorted albums printed to sortedalbums.csv")
 
 
 print()
