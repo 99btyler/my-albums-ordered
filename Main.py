@@ -16,7 +16,7 @@ with open("albums.csv", "r") as csvfile:
 
 	# Sort content by sort_setting
 	sorted_albums = sorted(csvfile_read, key=lambda row : row[sort_setting])
-	print("Albums sorted by " + sort_setting)
+	print("Sorted the albums by " + sort_setting)
 
 	# Write sorted content to sortedalbums.csv
 	with open("sortedalbums.csv", "w") as csvfile:
@@ -24,7 +24,7 @@ with open("albums.csv", "r") as csvfile:
 		csvfile_write.writeheader()
 		for row in sorted_albums:
 			csvfile_write.writerow(row)
-		print("Sorted albums printed to sortedalbums.csv")
+		print("Printed the sorted albums to sortedalbums.csv")
 
 
 print()
