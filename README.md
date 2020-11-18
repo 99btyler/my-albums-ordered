@@ -1,5 +1,5 @@
 # my-albums-ordered
-Personal tool to sort albums in a csv file
+Sorts csv file of albums
 
 # Using this yourself
 1. Download this repository
