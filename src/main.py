@@ -14,12 +14,12 @@ with open("albums.csv", "r") as albumsfile:
 	print("Which one do you want to sort by?")
 	# Get decision
 	while True:
-		# make sure it's a number
+		# - make sure it's a number
 		try:
 			decision = int(input("Enter number: "))
 		except ValueError:
 			continue
-		# make sure it's valid
+		# - make sure it's valid
 		if decision >= 0 and decision < len(options):
 			break
 	sort_setting = options[decision]
